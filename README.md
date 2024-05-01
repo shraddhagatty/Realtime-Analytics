@@ -2,7 +2,7 @@
 
 In this project, I utilized an AWS-based pipeline involving AWS Kinesis, Glue, and Athena to perform real-time analytics of mobile coverage using PySpark. The following is the AWS architecture for this project:
 
-![AWS Architecture](/images/aws-architecture.png)
+![AWS Architecture](/images/unknown.png)
 
 The system will stream logs from Amazon Kinesis, process them using AWS Glue with PySpark, and perform data aggregation for advanced analytics.
 
@@ -31,6 +31,9 @@ We added a trigger to the Lambda function that will call the Lambda when a CSV f
 We created an ETL job on Glue and added the PySpark streaming code to AWS Glue.
 
 ![Glue ETL Job](/images/glue-etl-job.png)
+
+
+Pyspark streaming code sets up a robust streaming data analysis pipeline that continuously processes incoming data from a Kinesis stream, performs aggregations, and writes the results to S3.
 
 When a CSV file is uploaded to the S3 bucket, it streams it to Kinesis, processes it on Glue, and uploads the output to S3. Below, you can see the CloudWatch logs when the CSV was uploaded.
 
